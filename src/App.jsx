@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <>
-      <h3 style={{ textAlign: 'center' }}>App Name</h3>
+      <h3 style={{ textAlign: 'center' }}>Pagination</h3>
     </>
   );
 }
