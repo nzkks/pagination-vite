@@ -21,11 +21,11 @@ function App() {
     <>
       <h3 style={{ textAlign: 'center' }}>Pagination</h3>
       {products.length > 0 && (
-        <div>
+        <div className="products">
           {products.map(product => (
-            <div key={product.id}>
+            <div key={product.id} className="products__single">
               <img src={product.thumbnail} alt={product.title} />
-              <p>{product.title}</p>
+              <p className="products__title">{product.title}</p>
             </div>
           ))}
         </div>
