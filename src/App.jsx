@@ -5,7 +5,7 @@ function App() {
   const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
-    const response = await fetch('https://dummyjson.com/products?limit=10');
+    const response = await fetch('https://dummyjson.com/products?limit=100');
     const data = await response.json();
 
     if (data && data.products) {
