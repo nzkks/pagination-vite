@@ -34,7 +34,9 @@ function App() {
 
           <div className="pagination">
             <div>◀</div>
-            <div>1</div>
+            {[...Array(products.length / 10)].map((_, i) => {
+              return <div key={i}>{i + 1}</div>;
+            })}
             <div>▶</div>
           </div>
         </>
