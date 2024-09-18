@@ -51,24 +51,3 @@
   line-height: 1;
   margin: 0;
 }
-
-.pagination {
-  padding: 10px;
-  margin: 15px 0;
-  display: flex;
-  justify-content: center;
-}
-
-.pagination > div {
-  padding: 15px 20px;
-  border: 1px solid gray;
-  cursor: pointer;
-}
-
-.pagination__selected {
-  background-color: rgba(220, 220, 220, 0.2);
-}
-
-.pagination__disable {
-  opacity: 0;
-}

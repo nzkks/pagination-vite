@@ -1,4 +1,7 @@
 /* eslint-disable react/prop-types */
+
+import './pagination.css';
+
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   const handlePageChange = selectedPage => {
     if (selectedPage >= 1 && selectedPage <= totalPages && selectedPage !== currentPage) {
