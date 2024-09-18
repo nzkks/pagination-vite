@@ -18,6 +18,10 @@ function App() {
     fetchProducts();
   }, []);
 
+  const handlePageSelect = selectedPage => {
+    setPage(selectedPage);
+  };
+
   return (
     <>
       <h3 style={{ textAlign: 'center' }}>Pagination</h3>
@@ -35,7 +39,11 @@ function App() {
           <div className="pagination">
             <div>◀</div>
             {[...Array(products.length / 10)].map((_, i) => {
-              return <div key={i}>{i + 1}</div>;
+              return (
+                <div key={i} onClick={() => handlePageSelect(i + 1)}>
+                  {i + 1}
+                </div>
+              );
             })}
             <div>▶</div>
           </div>
