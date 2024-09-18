@@ -40,7 +40,11 @@ function App() {
             <div>◀</div>
             {[...Array(products.length / 10)].map((_, i) => {
               return (
-                <div key={i} onClick={() => handlePageSelect(i + 1)}>
+                <div
+                  key={i}
+                  onClick={() => handlePageSelect(i + 1)}
+                  className={page === i + 1 ? 'pagination__selected' : ''}
+                >
                   {i + 1}
                 </div>
               );

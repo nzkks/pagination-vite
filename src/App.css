@@ -64,3 +64,7 @@
   border: 1px solid gray;
   cursor: pointer;
 }
+
+.pagination__selected {
+  background-color: rgba(220, 220, 220, 0.2);
+}
