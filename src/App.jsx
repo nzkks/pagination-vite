@@ -19,7 +19,9 @@ function App() {
   }, []);
 
   const handlePageSelect = selectedPage => {
-    setPage(selectedPage);
+    if (selectedPage >= 1 && selectedPage <= products.length / 10 && selectedPage !== page) {
+      setPage(selectedPage);
+    }
   };
 
   return (
