@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [page, setPage] = useState(2);
+  const [page, setPage] = useState(1);
 
   const fetchProducts = async () => {
     const response = await fetch('https://dummyjson.com/products?limit=100');
