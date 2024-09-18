@@ -39,7 +39,9 @@ function App() {
           </div>
 
           <div className="pagination">
-            <div onClick={() => handlePageSelect(page - 1)}>◀</div>
+            <div onClick={() => handlePageSelect(page - 1)} className={page > 1 ? '' : 'pagination__disable'}>
+              ◀
+            </div>
             {[...Array(products.length / 10)].map((_, i) => {
               return (
                 <div
@@ -51,7 +53,12 @@ function App() {
                 </div>
               );
             })}
-            <div onClick={() => handlePageSelect(page + 1)}>▶</div>
+            <div
+              onClick={() => handlePageSelect(page + 1)}
+              className={page < products.length / 10 ? '' : 'pagination__disable'}
+            >
+              ▶
+            </div>
           </div>
         </>
       )}
