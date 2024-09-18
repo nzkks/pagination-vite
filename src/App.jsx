@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(2);
 
   const fetchProducts = async () => {
     const response = await fetch('https://dummyjson.com/products?limit=100');
@@ -23,7 +23,7 @@ function App() {
       <h3 style={{ textAlign: 'center' }}>Pagination</h3>
       {products.length > 0 && (
         <div className="products">
-          {products.slice(0, page * 10).map(product => (
+          {products.slice(page * 10 - 10, page * 10).map(product => (
             <div key={product.id} className="products__single">
               <img src={product.thumbnail} alt={product.title} />
               <p className="products__title">{product.title}</p>
