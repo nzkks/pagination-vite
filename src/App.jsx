@@ -37,7 +37,7 @@ function App() {
           </div>
 
           <div className="pagination">
-            <div>◀</div>
+            <div onClick={() => handlePageSelect(page - 1)}>◀</div>
             {[...Array(products.length / 10)].map((_, i) => {
               return (
                 <div
@@ -49,7 +49,7 @@ function App() {
                 </div>
               );
             })}
-            <div>▶</div>
+            <div onClick={() => handlePageSelect(page + 1)}>▶</div>
           </div>
         </>
       )}
